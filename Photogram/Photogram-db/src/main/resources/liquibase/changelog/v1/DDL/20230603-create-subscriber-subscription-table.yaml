@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 'subscriber-subscription-init'
+      author: Gafiyatullin Aidar
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            splitStatements: true
+            path: SQL/20230603-create-subscriber-subscription-table.sql
+            relativeToChangelogFile: true

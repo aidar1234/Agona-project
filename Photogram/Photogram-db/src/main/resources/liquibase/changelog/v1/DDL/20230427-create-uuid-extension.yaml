@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 'uuid-extension'
+      author: Gafiyatullin Aidar
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            splitStatements: true
+            path: SQL/20230427-create-uuid-extension.sql
+            relativeToChangelogFile: true

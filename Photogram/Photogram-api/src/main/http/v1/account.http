@@ -1,0 +1,61 @@
+### Get
+GET localhost:8080/api/v1/account
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMzIzODgsImlkIjoiYzQ0YmRmNzYtYjBiOS00ZWQzLWJhZTEtOGZkYzk1NDU5ODEwIn0.Pzfnl8yRR646P2cVPdCQHldtb23InUCe_YyJOlxAVb0
+
+
+### Get info
+GET localhost:8080/api/v1/account/info
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4MTEzNjcsImlkIjoiNGE4YWU0OWEtZjZmOS00MDhiLTk4NmUtM2RhMWEwYjU4YTAzIn0.s5ApMUX8623iHflCwgeTbx75fWcL3UYZLJcwmJCykN4
+
+### Edit
+PUT localhost:8080/api/v1/account
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMzIzODgsImlkIjoiYzQ0YmRmNzYtYjBiOS00ZWQzLWJhZTEtOGZkYzk1NDU5ODEwIn0.Pzfnl8yRR646P2cVPdCQHldtb23InUCe_YyJOlxAVb0
+
+{
+  "email": "ajdar.gafiat@gmail.com",
+  "username": "AIDAR",
+  "firstName": "sad",
+  "lastName": "asd",
+  "gender": "MALE",
+  "aboutMe": "ААААААААА",
+  "birthDate": null,
+  "fields": [
+    "username", "aboutMe"
+  ]
+}
+
+### Change password
+PUT localhost:8080/api/v1/account/change-password
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU3OTIxNTMsImlkIjoiZmNhZDI5NTItNzg3ZC00MzM4LWFjMjgtYjk1Y2I1ZTcxZTU0In0.m6vvqgnWGMXYXwroCbHcr-UUjGJwdmW2jKa87j0hj5A
+
+{
+  "oldPassword": "фффффффффф",
+  "newPassword": "фффффффф"
+}
+
+### Subscibe
+PUT localhost:8080/api/v1/account/subscribe/AIDAR
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4ODgyNzUsImlkIjoiN2VkZTI1YzYtMzA0Mi00YzNiLTk1ZGMtNjhhMDNiMmU2YWE5In0.fdCD-D1mPMGKclZ4_N79NRZbWvmtkObvXyEoSy5GvZg
+
+### Unsubscribe
+PUT localhost:8080/api/v1/account/unsubscribe/AIDAR
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4ODg2NjQsImlkIjoiNGE4YWU0OWEtZjZmOS00MDhiLTk4NmUtM2RhMWEwYjU4YTAzIn0.xmuwrRl8fJjFKdx8RynAqAHTtc8dCaswS6pXtgqUEiQ
+
+### Subscribers
+GET localhost:8080/api/v1/account/subscribers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4ODg2NjQsImlkIjoiNGE4YWU0OWEtZjZmOS00MDhiLTk4NmUtM2RhMWEwYjU4YTAzIn0.xmuwrRl8fJjFKdx8RynAqAHTtc8dCaswS6pXtgqUEiQ
+
+### Subscriptions
+GET localhost:8080/api/v1/account/subscriptions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4ODg2NjQsImlkIjoiNGE4YWU0OWEtZjZmOS00MDhiLTk4NmUtM2RhMWEwYjU4YTAzIn0.xmuwrRl8fJjFKdx8RynAqAHTtc8dCaswS6pXtgqUEiQ
+
+### Delete
+DELETE localhost:8080/api/v1/account
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4MTM2NTUsImlkIjoiZmYyZDk5YmEtMzk2NS00YTRiLWE5ZTYtNzMyMGI0OGYzZDk2In0.mS9K0mTiBYPhrxt7-VyoBaj0k27BIvirBQZbxfb6lUI
+
+### Get publications
+GET localhost:8080/api/v1/account/publications
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMzIzODgsImlkIjoiYzQ0YmRmNzYtYjBiOS00ZWQzLWJhZTEtOGZkYzk1NDU5ODEwIn0.Pzfnl8yRR646P2cVPdCQHldtb23InUCe_YyJOlxAVb0

@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 'refresh-token-init'
+      author: Gafiyatullin Aidar
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            splitStatements: true
+            path: SQL/20230528-create-refresh-token-table.sql
+            relativeToChangelogFile: true

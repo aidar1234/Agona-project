@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 'publication-table-init'
+      author: Gafiyatullin Aidar
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            splitStatements: true
+            path: SQL/20230605-create-publication-table.sql
+            relativeToChangelogFile: true

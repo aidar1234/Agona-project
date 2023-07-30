@@ -1,0 +1,57 @@
+### email: ajdar.gafiat@gmail.com,  password: 11111111
+### email: xogolot208@soremap.com, password: aaaaaaaa
+
+### Sign up
+POST localhost:8080/api/v1/auth/sign-up
+Content-Type: application/json
+
+{
+  "email": "ajdar.gafiat@gmail.com",
+  "password": "11111111",
+  "username": "Ai80",
+  "firstName": "Айдар",
+  "lastName": "Гафиятуллин",
+  "gender": "MALE",
+  "aboutMe": "Это я",
+  "birthDate": "2021-08-31T00:00:00"
+}
+
+### Sign up
+POST localhost:8080/api/v1/auth/sign-up
+Content-Type: application/json
+
+{
+  "email": "xogolot208@soremap.com",
+  "password": "aaaaaaaa",
+  "username": "Xogo8",
+  "firstName": "User",
+  "lastName": "User",
+  "gender": "FEMALE",
+  "aboutMe": "Обо мне",
+  "birthDate": "2021-08-31T00:00:00"
+}
+
+### Sign in
+POST localhost:8080/api/v1/auth/sign-in
+Content-Type: application/json
+
+{
+  "email": "ajdar.gafiat@gmail.com",
+  "password": "11111111"
+}
+
+### Sign in
+POST localhost:8080/api/v1/auth/sign-in
+Content-Type: application/json
+
+{
+  "email": "xogolot208@soremap.com",
+  "password": "aaaaaaaa"
+}
+
+### Auth
+GET localhost:8080/api/v1/auth/token/4f70b14b-1520-4724-81f1-1e75591461f7
+
+### Logout
+PUT localhost:8080/api/v1/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMjc3ODQsImlkIjoiYzQ0YmRmNzYtYjBiOS00ZWQzLWJhZTEtOGZkYzk1NDU5ODEwIn0.TxjasgwEpQYGH7ggHUDG4Axp8Y3jueRozUrNyPKvU0g

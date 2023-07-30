@@ -1,0 +1,13 @@
+GET localhost:8080/api/v1/publications/523b1ef0-d7e8-4a04-b955-a515b90c1ec5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMzIzODgsImlkIjoiYzQ0YmRmNzYtYjBiOS00ZWQzLWJhZTEtOGZkYzk1NDU5ODEwIn0.Pzfnl8yRR646P2cVPdCQHldtb23InUCe_YyJOlxAVb0
+
+###
+PUT localhost:8080/api/v1/publications/a23dac9d-486b-4ec5-90d0-be334e3bad03
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMjcwMDYsImlkIjoiZmI5Y2RkOTUtNDg5YS00MTE4LWI3NWUtYTAzNzIzNGExNGEwIn0.xui-2mgjtJ4IbsIvZnedtZHzxIreVrAvC0-DdOrBy00
+Content-Type: application/x-www-form-urlencoded
+
+description=НОВОЕ ОПИСАНИЕ
+
+###
+DELETE localhost:8080/api/v1/publications/a23dac9d-486b-4ec5-90d0-be334e3bad03
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMjcwMDYsImlkIjoiZmI5Y2RkOTUtNDg5YS00MTE4LWI3NWUtYTAzNzIzNGExNGEwIn0.xui-2mgjtJ4IbsIvZnedtZHzxIreVrAvC0-DdOrBy00

@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 'account-image-table-init'
+      author: Gafiyatullin Aidar
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            splitStatements: true
+            path: SQL/20230606-create-account-image-table.sql
+            relativeToChangelogFile: true

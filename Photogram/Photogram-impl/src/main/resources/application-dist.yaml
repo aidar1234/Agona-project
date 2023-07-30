@@ -1,0 +1,60 @@
+# TODO !!! CREATE application.yaml IN RESOURCES DIRECROTY AND DON'T ADD TO GIT !!!
+# TODO !!! DO GRADLE RUN GOALS - CLEAN, ASSEMBLE !!!
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/photogram
+    username: postgres
+    password: # TODO !!! YOUR DATABASE PASSWORD !!!
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 25
+  liquibase:
+    change-log: liquibase/changelog/changelog-master.yaml
+  sql:
+    init:
+      encoding: UTF-8
+
+  mail:
+    host: smtp.gmail.com
+    protocol: smtp
+    default-encoding: UTF-8
+    port: 587
+    username: # TODO !!! YOUR EMAIL !!!
+    password: # TODO !!! YOUR APP PASSWORD !!!
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  servlet:
+    multipart:
+      max-file-size: 31MB
+      max-request-size: 31MB
+
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    encoding:
+      charset: UTF-8
+
+security:
+  jwt:
+    secret: e0a07206-2d68-44a4-bdc2-4353f5135a32
+
+s3:
+  bucket-name: photogram
+  images-directory-name: images/
+  videos-directory-name: videos/
+
+file:
+  max-publication-images-by-request: 10
+  max-publication-videos-by-request: 1
+  max-publication-image-size: 8 #MB
+  max-publication-video-size: 30 #MB

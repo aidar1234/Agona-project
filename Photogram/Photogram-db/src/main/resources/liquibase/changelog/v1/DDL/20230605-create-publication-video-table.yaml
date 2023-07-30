@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 'publication-video-table-init'
+      author: Gafiyatullin Aidar
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            splitStatements: true
+            path: SQL/20230605-create-publication-video-table.sql
+            relativeToChangelogFile: true

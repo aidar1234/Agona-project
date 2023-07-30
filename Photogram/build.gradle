@@ -1,0 +1,34 @@
+allprojects {
+    group 'com.technokratos'
+    version = '0.0.1-SNAPSHOT'
+}
+
+subprojects {
+
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    ext {
+        springbootVersion = '2.7.11'
+        swagger2Version = '2.9.2'
+    }
+
+    sourceCompatibility = JavaVersion.VERSION_11
+
+    dependencies {
+        implementation 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+        implementation "io.springfox:springfox-swagger-ui:${swagger2Version}"
+        implementation ("io.springfox:springfox-swagger2:${swagger2Version}")
+        compileOnly 'org.projectlombok:lombok:1.18.8'
+        annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+}

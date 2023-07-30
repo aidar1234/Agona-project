@@ -1,0 +1,16 @@
+### Get
+GET localhost:8080/api/v1/users/X
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMzIzODgsImlkIjoiYzQ0YmRmNzYtYjBiOS00ZWQzLWJhZTEtOGZkYzk1NDU5ODEwIn0.Pzfnl8yRR646P2cVPdCQHldtb23InUCe_YyJOlxAVb0
+
+### Subscribers
+GET localhost:8080/api/v1/users/Xogo8/subscribers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4ODc4MTAsImlkIjoiNGE4YWU0OWEtZjZmOS00MDhiLTk4NmUtM2RhMWEwYjU4YTAzIn0.wxwCQCVGuYFnTt-iBrcTsdzNowNwcZBh6KayW5mQfUw
+
+### Subscriptions
+GET localhost:8080/api/v1/users/Xogo8/subscriptions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4ODgxMjQsImlkIjoiN2VkZTI1YzYtMzA0Mi00YzNiLTk1ZGMtNjhhMDNiMmU2YWE5In0.JhMABXf6PRzTC0kfIOUZzMucqN_A-tdRXwkK_r4Qdk4
+
+### Get publications
+GET localhost:8080/api/v1/users/X/publications
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMzYxMDYsImlkIjoiYzQ0YmRmNzYtYjBiOS00ZWQzLWJhZTEtOGZkYzk1NDU5ODEwIn0.FzcWnIGZ6veW6bfuVcC6YQy-Vd3H0aScUPcklWJJyi8
+

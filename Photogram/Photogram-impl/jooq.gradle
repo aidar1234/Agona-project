@@ -1,0 +1,74 @@
+buildscript {
+
+    ext {
+        jooqVersion = '3.14.16'
+        postgresVersion = '42.6.0'
+        databaseDriver = 'org.postgresql.Driver'
+        databaseURL = "jdbc:postgresql://localhost:5432/photogram"
+        databaseUser = "postgres"
+        databasePassword = "bigdata8"
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jooq:jooq-codegen-maven:${jooqVersion}",
+                  "org.jooq:jooq:${jooqVersion}",
+                  "org.jooq:jooq-meta:${jooqVersion}",
+                  "org.postgresql:postgresql:${postgresVersion}"
+    }
+
+}
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'nu.studer.jooq'
+
+import org.jooq.codegen.GenerationTool
+import org.jooq.meta.jaxb.*
+
+task generateJooq {
+    def configuration = new Configuration()
+            .withJdbc(
+                    new Jdbc()
+                            .withDriver(databaseDriver)
+                            .withUrl(databaseURL)
+                            .withUser(databaseUser)
+                            .withPassword(databasePassword))
+            .withGenerator(
+                    new Generator()
+                            .withDatabase(
+                                    new Database().withExcludes("databasechangeloglock|databasechangelog").withInputSchema("public"))
+                            .withGenerate(
+                                    new Generate()
+                                            .withRoutines(false)
+                                            .withPojos(true)
+                                            .withDaos(false))
+                            .withTarget(
+                                    new Target()
+                                            .withPackageName('com.technokratos.model.jooq')
+                                            .withDirectory("$projectDir/src/main/java"))
+                            .withStrategy(
+                                    new Strategy()
+                                            .withMatchers(
+                                                    new Matchers()
+                                                            .withTables(
+                                                                    new MatchersTableType()
+                                                                            .withTableIdentifier(
+                                                                                    new MatcherRule()
+                                                                                            .withExpression('$0_Entity')
+                                                                                            .withTransform(MatcherTransformType.UPPER))
+                                                                            .withPojoClass(new MatcherRule().withExpression('$0_Entity')
+                                                                                    .withTransform(MatcherTransformType.PASCAL))
+                                                            )
+                                            )
+                            )
+            )
+
+    doLast {
+        GenerationTool.generate(configuration)
+    }
+}

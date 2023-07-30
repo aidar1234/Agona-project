@@ -1,0 +1,6 @@
+GET localhost:8080/api/v1/files/image/517076c4-0f19-4b7c-85fe-2ad260165cde.jpeg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMzYxMDYsImlkIjoiYzQ0YmRmNzYtYjBiOS00ZWQzLWJhZTEtOGZkYzk1NDU5ODEwIn0.FzcWnIGZ6veW6bfuVcC6YQy-Vd3H0aScUPcklWJJyi8
+
+###
+GET localhost:8080/api/v1/files/video/06f18cb2-fb23-42fe-b6a9-1c9e0821ec01.mp4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYxMzk3MTgsImlkIjoiYzQ0YmRmNzYtYjBiOS00ZWQzLWJhZTEtOGZkYzk1NDU5ODEwIn0.YuwBEU2gTG4gtIBymeoXWSjlb2-5XOF3QFI_k20J2ro

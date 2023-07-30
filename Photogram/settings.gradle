@@ -1,0 +1,4 @@
+rootProject.name = 'Photogram'
+include 'Photogram-api'
+include 'Photogram-db'
+include 'Photogram-impl'
